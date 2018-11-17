@@ -26,6 +26,7 @@ jobs:
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements/dev.txt" }}
       - run:
+          name: Download Requirements
           command: |
             python3 -m venv venv
             . venv/bin/activate
